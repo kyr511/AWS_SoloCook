@@ -21,6 +21,12 @@ class EnterIngredientsScreen : AppCompatActivity() {
 
         binding.btnGenerate.setOnClickListener {
             val intent = Intent(this, EnterIngredientsInside::class.java)
+            startActivity(intent)
+        }
+
+        binding.back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

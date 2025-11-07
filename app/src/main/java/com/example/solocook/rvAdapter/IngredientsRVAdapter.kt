@@ -19,7 +19,7 @@ class IngredientsRVAdapter (val items: ArrayList<String>) : RecyclerView.Adapter
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_enter_ingredients_inside, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.ingredients_item, parent, false)
         return ViewHolder(v)
     }
 

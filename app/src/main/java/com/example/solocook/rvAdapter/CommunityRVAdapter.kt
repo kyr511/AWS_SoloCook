@@ -19,7 +19,7 @@ class CommunityRVAdapter (val items: ArrayList<String>) : RecyclerView.Adapter<C
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_community, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.community_rv_item, parent, false)
         return ViewHolder(v)
     }
 

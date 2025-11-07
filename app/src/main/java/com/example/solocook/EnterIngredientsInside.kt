@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.solocook.databinding.ActivityEnterIngredientsInsideBinding
 import com.example.solocook.rvAdapter.CommunityRVAdapter
+import com.example.solocook.rvAdapter.IngredientsRVAdapter
 
 class EnterIngredientsInside : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class EnterIngredientsInside : AppCompatActivity() {
         items.add("a")
         items.add("a")
 
-        val rvAdapter = CommunityRVAdapter(items)
+        val rvAdapter = IngredientsRVAdapter(items)
         rv.adapter = rvAdapter
         rv.layoutManager = LinearLayoutManager(this)
 
@@ -36,6 +37,11 @@ class EnterIngredientsInside : AppCompatActivity() {
         }
 
         binding.backBtn.setOnClickListener { //Back to Home 버튼 클릭
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.back.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

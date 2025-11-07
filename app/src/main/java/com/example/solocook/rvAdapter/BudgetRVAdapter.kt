@@ -19,7 +19,7 @@ class BudgetRVAdapter (val items: ArrayList<String>) : RecyclerView.Adapter<Budg
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_budget_recipe_inside, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.budget_item, parent, false)
         return ViewHolder(v)
     }
 

@@ -40,6 +40,11 @@ class BudgetRecipeInsideActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
