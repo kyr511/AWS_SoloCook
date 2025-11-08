@@ -11,10 +11,8 @@ class IngredientsRVAdapter (private val dataset: ArrayList<String>) : RecyclerVi
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val foodName: TextView
-        val foodAmount: TextView
         init {
             foodName = itemView.findViewById(R.id.foodName)
-            foodAmount = itemView.findViewById(R.id.foodAmount)
         }
 
     }
@@ -31,7 +29,6 @@ class IngredientsRVAdapter (private val dataset: ArrayList<String>) : RecyclerVi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.foodName.text = dataset[position]
-        holder.foodAmount.text = dataset[position]
     }
 
     override fun getItemCount(): Int {

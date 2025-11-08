@@ -37,11 +37,11 @@ class EnterIngredientsInside : AppCompatActivity() {
             title.text = it.toString()
         })
 
-        viewModel.liveTitle.observe(this, Observer{
+        viewModel.liveExplain.observe(this, Observer{
             explain.text = it.toString()
         })
 
-        viewModel.liveTitle.observe(this, Observer{
+        viewModel.liveRecipe.observe(this, Observer{
             recipe.text = it.toString()
         })
 

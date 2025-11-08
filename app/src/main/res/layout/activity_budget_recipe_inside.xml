@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Back to Home"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -60,7 +60,7 @@
 
             <TextView
                 android:text="Ready to cook in minutes"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

@@ -38,30 +38,33 @@ class BudgetRecipeInsideActivity : AppCompatActivity() {
             title.text = it.toString()
         })
 
-        viewModel.liveTitle.observe(this, Observer{
+        viewModel.liveExplain.observe(this, Observer{
             explain.text = it.toString()
         })
 
-        viewModel.liveTitle.observe(this, Observer{
+        viewModel.liveRecipe.observe(this, Observer{
             recipe.text = it.toString()
         })
 
 
         //Recyclerdview
         val rv = binding.rv
+
         rv.layoutManager = LinearLayoutManager(this)
 
         fun updateAdapter() {
             val ingredients = viewModel.liveIngredientsList.value
             val prices = viewModel.livePriceList.value
+
             if (ingredients != null && prices != null && ingredients.size == prices.size) {
                 val budgetAdapter = BudgetRVAdapter(ingredients, prices) // Adapter가 두 리스트를 받도록 설계됨
                 rv.adapter = budgetAdapter
 
-                // 총합 계산
                 val total = prices.sum()
                 binding.total.text = total.toString()
+
             }
+
         }
 
         viewModel.liveIngredientsList.observe(this) { updateAdapter() }
